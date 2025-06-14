@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <h2>行事曆 - {{ user }}</h2>
+    <a href="/logout">登出</a> | <a href="/event/new">新增行程</a>
+    <hr>
+    {% for title, date, note in events %}
+      <p><b>{{ date }}</b> - {{ title }}<br>備註：{{ note }}</p>
+    {% else %}
+      <p>目前沒有行程。</p>
+    {% endfor %}
+  </body>
+</html>
